@@ -1,8 +1,6 @@
 ---
-title: "はじめての投稿"
-date: 2017-12-27T01:55:38Z
-draft: true
+title: "My First Post"
+date: 2018-01-22T02:22:24Z
+draft: false
 ---
 
-はじめての投稿。
-はじめての投稿。

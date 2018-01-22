@@ -1,0 +1,7 @@
+baseURL = "http://example.org/"
+languageCode = "ja"
+title = "noob"
+theme = "aglaus"
+
+[params]
+        dateformat = "2006/01/02"

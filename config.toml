@@ -1,8 +1,0 @@
-baseURL = "https://yasuto777.github.io/"
-languageCode = "ja"
-title = "noob"
-theme = "aglaus"
-canonifyurls = true
-
-[params]
-        dateformat = "2006/01/02"

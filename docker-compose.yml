@@ -1,33 +1,17 @@
-version: '3'
+version: '3.6'
 
 services:
   hugo:
-    # image: golang:alpine
     build: .
     volumes:
-      - .:/hugo
-      - setup:/hugo/setup
-      - log:/hugo/log
-      - ./log/hugo:/var/log/hugo:rw
     working_dir: /hugo
+    ports:
+      - 3000:3000
     command:
       - sh
       - -c
       - |
         hugo server -D --bind="0.0.0.0" --logFile="/var/log/hugo/hugo.log"
-    environment:
-      - GOPATH=/go
-
-  proxy:
-    image: nginx:latest
-    ports:
-      - 3000:3000
-    volumes:
-      - ./setup/nginx:/etc/nginx:ro
-      - ./log/nginx:/var/log/nginx:rw
-    links:
-      - hugo:hugo
 
 volumes:
-  setup:
   log:

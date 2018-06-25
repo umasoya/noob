@@ -4,6 +4,8 @@ services:
   hugo:
     build: .
     volumes:
+      - ./hugo:/hugo
+      - ../html:/hugo/public
     working_dir: /hugo
     ports:
       - 3000:3000
@@ -11,7 +13,4 @@ services:
       - sh
       - -c
       - |
-        hugo server -D --bind="0.0.0.0" --logFile="/var/log/hugo/hugo.log"
-
-volumes:
-  log:
+        echo "run hugo" && hugo server -D --bind="0.0.0.0"
